@@ -1,0 +1,23 @@
+spring: 
+  application: 
+    name: city-client 
+server: 
+  port: 9081
+info:
+  description: Eureka-Client-City App
+  name: City Client with Discovery
+
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka} 
+  instance: 
+    hostname: localhost 
+    preferIpAddress: true
+    status-page-url-path: http://${eureka.instance.hostname}:${server.port}/cities 
+    health-check-url: http://${eureka.instance.hostname}:${server.port}/health 
+    home-page-url: http://${eureka.instance.hostname}:${server.port}/
+  healthcheck:
+    enabled: true
+  register-with-eureka: true
+  fetch-registry: false
