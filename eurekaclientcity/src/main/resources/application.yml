@@ -2,7 +2,7 @@ spring:
   application: 
     name: city-client 
 server: 
-  port: 9081
+  port: 6060
 info:
   description: Eureka-Client-City App
   name: City Client with Discovery
@@ -21,3 +21,4 @@ eureka:
     enabled: true
   register-with-eureka: true
   fetch-registry: false
+
