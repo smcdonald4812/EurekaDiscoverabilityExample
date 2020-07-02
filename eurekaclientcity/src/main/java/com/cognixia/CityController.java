@@ -15,19 +15,25 @@ public class CityController {
 	
 	@Autowired
 	CityUtil cs;
+	private boolean flag = true;
 	
 	@GetMapping("/{country}")
 	public String getCities(@PathVariable String country) {
 		List<String> list = new Vector<>();
-		String l = new String("");
+		String l = new String("<table border=1>");
 		Map<String, List<String>> cities = cs.getList();
-		if(cities.get(country)!=null) {
+		if(flag) {
+			flag = false;
+			list = cities.get("USA");
+			for(String city: list) l += "<tr><td>"+city+"</td></tr>";
+			l+=new String("</table>");
+		} else if(cities.get(country)!=null) {
 			list = cities.get(country);
-			for(String city: list) l += city+" ";
+			for(String city: list) l += "<tr><td>"+city+"</td></tr>";
+			l+=new String("</table>");
 		}
 		else {
-			list = cities.get("USA");
-			for(String city: list) l += city+" ";
+			l = "Your country is not recognized";
 		}
 		return l;
 	}
