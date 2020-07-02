@@ -1,4 +1,4 @@
-spring: 
+tspring: 
   application: 
     name: city-service 
 server: 
@@ -14,7 +14,7 @@ eureka:
   instance: 
     hostname: localhost 
     preferIpAddress: true
-    status-page-url-path: http://${eureka.instance.hostname}:${server.port}/{country}
+    status-page-url-path: http://${eureka.instance.hostname}:${server.port}/default
     health-check-url: http://${eureka.instance.hostname}:${server.port}/health 
     home-page-url: http://${eureka.instance.hostname}:${server.port}/
   healthcheck:
