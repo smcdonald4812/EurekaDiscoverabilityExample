@@ -26,7 +26,8 @@ public class CityController {
 			for(String city: list) l += city+"<br>";
 		}
 		else {
-			l = "Your country is not recognized :'(";
+			l = "Your country is not recognized :'( <br> Please enter the name "
+					+ "of the country you're interested in in the url";
 		}
 		return l;
 	}
