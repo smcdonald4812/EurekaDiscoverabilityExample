@@ -31,15 +31,4 @@ public class CityController {
 		}
 		return l;
 	}
-	
-	@GetMapping("/{country}")
-	public List<String> getCities(@PathVariable String country) {
-		List<String> l = new Vector<>();
-		Map<String, List<String>> cities = cs.getList();
-		if(cities.get(country)!=null) l = cities.get(country);
-		else {
-			l = cities.get("USA");
-		}
-		return l;
-	}
 }
