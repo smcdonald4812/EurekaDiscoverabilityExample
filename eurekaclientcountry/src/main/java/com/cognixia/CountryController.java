@@ -6,15 +6,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CountryController {
-
+	private String country[] = {"USA","China","India","Pakistan","Canada"};
 	@GetMapping("/countries")
 	public String getCountry() {
-		return "<table border=1><tr>"
-				+ "<td>USA</td></tr><tr>"
-				+ "<td>China</td></tr>"
-				+ "<tr><td>India</td></tr>"
-				+ "<tr><td>Pakistan</td></tr>"
-				+ "<tr><td>Canada</td></tr>"
-				+ "</table>";
+		String s = new String("<table border=1>");
+		for(int i = 0;i < country.length; i++) {
+			s+="<tr><td>"+country[i]+"</td></tr>";
+		}
+		s+= "</table>";
+		return s;
 	}
 }

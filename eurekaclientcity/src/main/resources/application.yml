@@ -1,4 +1,4 @@
-spring: 
+tspring: 
   application: 
     name: city-service 
 server: 
@@ -21,4 +21,3 @@ eureka:
     enabled: true
   register-with-eureka: true
   fetch-registry: false
-

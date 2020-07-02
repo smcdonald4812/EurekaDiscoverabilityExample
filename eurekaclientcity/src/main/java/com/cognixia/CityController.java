@@ -19,11 +19,12 @@ public class CityController {
 	@GetMapping("/{country}")
 	public String getCities(@PathVariable String country) {
 		List<String> list = new Vector<>();
-		String l = new String("");
+		String l = new String("<table border=1>");
 		Map<String, List<String>> cities = cs.getList();
 		if(cities.get(country)!=null) {
 			list = cities.get(country);
-			for(String city: list) l += city+"<br>";
+			for(String city: list) l += "<tr><td>"+city+"</td></tr>";
+			l+=new String("</table>");
 		}
 		else {
 			l = "Your country is not recognized :'( <br> Please enter the name "
