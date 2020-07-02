@@ -1,11 +1,11 @@
 spring: 
   application: 
-    name: country-client 
+    name: country-service
 server: 
-  port: 9080
+  port: 6060
 info:
   description: Eureka-Client-Country App
-  name: Hello Client with Discovery
+  name: Client with Discovery
 
 eureka: 
   client: 

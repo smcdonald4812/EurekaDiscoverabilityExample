@@ -1,8 +1,8 @@
 spring: 
   application: 
-    name: city-client 
+    name: city-service 
 server: 
-  port: 6060
+  port: 9080
 info:
   description: Eureka-Client-City App
   name: City Client with Discovery
@@ -14,7 +14,7 @@ eureka:
   instance: 
     hostname: localhost 
     preferIpAddress: true
-    status-page-url-path: http://${eureka.instance.hostname}:${server.port}/{country}
+    status-page-url-path: http://${eureka.instance.hostname}:${server.port}/
     health-check-url: http://${eureka.instance.hostname}:${server.port}/health 
     home-page-url: http://${eureka.instance.hostname}:${server.port}/
   healthcheck:

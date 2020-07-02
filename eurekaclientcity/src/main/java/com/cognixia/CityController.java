@@ -23,11 +23,10 @@ public class CityController {
 		Map<String, List<String>> cities = cs.getList();
 		if(cities.get(country)!=null) {
 			list = cities.get(country);
-			for(String city: list) l += city+" ";
+			for(String city: list) l += city+"<br>";
 		}
 		else {
-			list = cities.get("USA");
-			for(String city: list) l += city+" ";
+			l = "Your country is not recognized :'(";
 		}
 		return l;
 	}
