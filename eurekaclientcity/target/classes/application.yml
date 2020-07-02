@@ -1,4 +1,4 @@
-tspring: 
+spring: 
   application: 
     name: city-service 
 server: 

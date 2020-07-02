@@ -1,4 +1,4 @@
-uspring: 
+spring: 
   application: 
     name: country-service 
 server: 
