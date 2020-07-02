@@ -14,7 +14,7 @@ eureka:
   instance: 
     hostname: localhost 
     preferIpAddress: true
-    status-page-url-path: http://${eureka.instance.hostname}:${server.port}/default 
+    status-page-url-path: http://${eureka.instance.hostname}:${server.port}/countries 
     health-check-url: http://${eureka.instance.hostname}:${server.port}/health 
     home-page-url: http://${eureka.instance.hostname}:${server.port}/
   healthcheck:
