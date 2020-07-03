@@ -5,7 +5,7 @@ server:
   port: 6060
 info:
   description: Eureka-Client-Country App
-  name: Hello Client with Discovery
+  name: Client with Discovery
 
 eureka: 
   client: 
